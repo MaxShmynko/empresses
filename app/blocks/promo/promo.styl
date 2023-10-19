@@ -1,6 +1,12 @@
 .promo
+    position relative
     background url(/images/promo.jpg) 0 0/100% 100% no-repeat
     height 100vh
+
+    &__wrap
+        padding w(10) 0 0 w(50)
+        +below(1920px)
+            padding w(93) 0 0 w(50)
 
     &__small-title
         color $c-beige
@@ -9,7 +15,81 @@
         text-shadow 2px 2px 6px #000
         font-family $ff-Romul
         font-size w(28)
-        font-style normal
-        font-weight 400
         line-height w(68)
         letter-spacing w(2.8)
+
+    &__title
+        display flex
+        align-items center
+        position relative
+        color $c-beige
+        font-family $ff-Romul
+        text-align center
+        font-size w(70)
+        text-shadow 4px 4px 7px #000
+        line-height w(90)
+        padding w(5) 0 w(5) 0
+        img
+            position absolute
+            width w(170)
+        +below(1920px)
+            font-size w(82)
+            padding w(20) 0 w(20) 0
+
+    &__rounding-1
+        left 0
+
+    &__rounding-2
+        right 0
+
+
+    &__container
+        width w(780)
+        +below(1920px)
+            width w(880)
+
+    &__container-text
+        color $c-white
+        text-align center
+        font-family $ff-FuturaPT
+        font-size w(21)
+        line-height w(24)
+        padding 0 w(90)
+        +below(1920px)
+            padding 0 w(140)
+
+    &__text
+        padding-top w(10)
+        +below(1920px)
+            padding-top w(15)
+
+    &__img
+        position absolute
+        width w(800)
+        right w(5)
+        bottom 0
+        img
+            width 100%
+        +below(1920px)
+            width w(1120)
+
+    &__buttons
+        display flex
+        flex-direction column
+        align-items center
+
+    &__button
+        text-align center
+        font-family $ff-Romul
+        color $c-beige-button
+        background-color transparent
+        border 1px solid $c-beige
+        border-radius w(50)
+        width w(350)
+        padding w(20) 0 w(15) 0
+        text-shadow 4px 4px 2px rgba(0, 0, 0, 0.25)
+        margin-top w(20)
+        +below(1920px)
+            margin-top w(35)
+
+
