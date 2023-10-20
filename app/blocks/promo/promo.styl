@@ -2,11 +2,15 @@
     position relative
     background url(/images/promo.jpg) 0 0/100% 100% no-repeat
     height 100vh
+    +below(720px)
+        background url(/images/promo-mobile.jpg) 0 0/100% 100% no-repeat
 
     &__wrap
         padding w(10) 0 0 w(50)
         +below(1920px)
             padding w(93) 0 0 w(50)
+        +below(920px)
+            padding wm(20) 0 0 wm(15)
 
     &__small-title
         color $c-beige
@@ -17,6 +21,8 @@
         font-size w(28)
         line-height w(68)
         letter-spacing w(2.8)
+        +below(720px)
+            font-size wm(12)
 
     &__title
         display flex
@@ -35,6 +41,9 @@
         +below(1920px)
             font-size w(82)
             padding w(20) 0 w(20) 0
+        +below(720px)
+            font-size wm(32)
+
 
     &__rounding-1
         left 0
@@ -55,8 +64,14 @@
         font-size w(21)
         line-height w(24)
         padding 0 w(90)
+        position relative
+        z-index 3
         +below(1920px)
             padding 0 w(140)
+        +below(920px)
+            font-size wm(6)
+            padding 0 wm(10)
+            line-height wm(6)
 
     &__text
         padding-top w(10)
@@ -66,30 +81,73 @@
     &__img
         position absolute
         width w(800)
-        right w(5)
+        right 0
         bottom 0
         img
             width 100%
         +below(1920px)
-            width w(1120)
+            width w(1250)
+        +below(1800px)
+            width w(1200)
+        +below(920px)
+            width wm(200)
 
     &__buttons
         display flex
         flex-direction column
         align-items center
+        position relative
+        z-index 3
 
     &__button
         text-align center
         font-family $ff-Romul
         color $c-beige-button
         background-color transparent
-        border 1px solid $c-beige
+        border w(1) solid $c-beige
         border-radius w(50)
         width w(350)
+        font-size w(21)
         padding w(20) 0 w(15) 0
-        text-shadow 4px 4px 2px rgba(0, 0, 0, 0.25)
+        text-shadow w(4) w(4) w(2) rgba(0, 0, 0, 0.25)
         margin-top w(20)
         +below(1920px)
             margin-top w(35)
+
+    &__darkening
+        position absolute
+        bottom 0
+        left 0
+        width 100%
+        height w(500)
+        background linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))
+
+    &__number
+        position absolute
+        top w(280)
+        right w(67)
+        +below(1920px)
+            width w(800)
+
+    &__footer
+        position absolute
+        display flex
+        align-items center
+        justify-content space-between
+        width 100%
+        padding 0 w(50)
+        bottom w(20)
+        img
+            margin-right w(20)
+        +below(1920px)
+            bottom w(50)
+        +below(1800px)
+            bottom w(20)
+
+    &__advertisement
+        color $c-beige
+        font-size w(16)
+        font-family $ff-FuturaPT
+
 
 

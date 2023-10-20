@@ -17,4 +17,11 @@ mixin promo()
                         +e('button').button Купить билет
                 +e.img
                     img(src='./images/promo-img.png')
-                
+        +e.darkening
+            img( class= 'promo__number' src='./images/promo-number.png')
+            +e.footer
+                +e.content-icons
+                    img(src='./images/twelve.svg')
+                    img(src='./images/layer.svg')
+                +e.advertisement Реклама. Токен
+
