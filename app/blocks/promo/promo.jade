@@ -6,8 +6,10 @@ mixin promo()
                     +e.small-title Хотите знать
                     +e.title
                         img( class= 'promo__rounding-1' src='./images/rounding-1.svg')
+                        img( class= 'promo__rounding-1-mobile' src='./images/rounding-1-mobile.svg')
                         +e.title-text Какая вы императрица?
                         img( class= 'promo__rounding-2' src='./images/rounding-2.svg')
+                        img( class= 'promo__rounding-2-mobile' src='./images/rounding-2-mobile.svg')
                     +e.container-text
                         +e('p').text В глубине души вы давно подозревали, что царские замашки, очевидные для близких, рвутся наружу. Возможно, в ваших венах течёт голубая кровь благородных фамилий. А может быть, вы унаследовали аристократический характер от одной из великих государынь.
                         +e('p').text 26 октября в прокат выходит исторический блокбастер Андрея Кравчука «Императрицы» о сложном сплетении судеб первых правительниц Российской империи.
@@ -16,7 +18,8 @@ mixin promo()
                         +e('button').button Пройти ТЕСТ
                         +e('button').button Купить билет
                 +e.img
-                    img(src='./images/promo-img.png')
+                    img(class= 'promo__fon' src='./images/promo-img.png')
+                    img(class= 'promo__mobile' src='./images/promo-mobile.jpg')
         +e.darkening
             img( class= 'promo__number' src='./images/promo-number.png')
             +e.footer
