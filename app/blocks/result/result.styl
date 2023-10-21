@@ -1,0 +1,61 @@
+.result
+    width 100%
+    position relative
+    background url(/images/promo.jpg) 0 0/100% 100% no-repeat
+    height 100vh
+
+    &__wrap
+        padding w(100) w(60) w(50) w(64)
+        display flex
+        flex-direction row
+        justify-content flex-start
+
+    &__answer
+        max-width w(1000)
+        display flex
+        flex-direction column
+        align-items center
+        position relative
+        text-align center
+        img
+            position absolute
+            width 100%
+            top w(30)
+
+
+    &__answer-title
+        margin w(141)
+        color $c-beige
+        text-shadow w(4) w(4) w(7) $c-black
+        font-family $ff-Romul
+        font-size w(48)
+        font-weight 400
+        line-height w(68)
+
+    &__answer-text
+        max-width w(840)
+        color $c-white
+        font-family $ff-FuturaPT
+        font-size w(32)
+        font-weight 400
+        line-height w(32)
+
+    &__footer
+        position absolute
+        display flex
+        align-items center
+        justify-content space-between
+        width 100%
+        padding 0 w(50)
+        bottom w(20)
+        img
+            margin-right w(20)
+        +below(1920px)
+            bottom w(50)
+        +below(1800px)
+            bottom w(20)
+
+    &__advertisement
+        color $c-beige
+        font-size w(16)
+        font-family $ff-FuturaPT
