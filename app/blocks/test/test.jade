@@ -1,0 +1,27 @@
+mixin test()
+
+    +b('section').test
+        +e.wrap
+            img( class= 'test__border' src='./images/result-border.svg')
+            +e.wrap__content
+                +e.head
+                    +e('p').counter-text
+                    +e('p').title
+                +e('ul').list
+                    +e('li').item(data-id='А')
+                        +e.sign
+                            +e('span').sign-text
+                        +e.answer
+                            +e('p').answer-text
+                    +e('li').item(data-id='Б')
+                        +e.sign
+                            +e('span').sign-text
+                        +e.answer
+                            +e('p').answer-text
+                    +e('li').item(data-id='В')
+                        +e.sign
+                            +e('span').sign-text
+                        +e.answer
+                            +e('p').answer-text
+            +e.img-question
+                img(src='./images/result-img-1.png')

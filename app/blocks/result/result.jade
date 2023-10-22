@@ -1,23 +1,23 @@
 mixin result()
     +b('section').result
-        +e.wrap
+        +e.wrap__main
             +e.answer
                 img( class= 'result__border' src='./images/result-border.svg')
                 +e.answer-title Вы Екатерина I Алексеевна
                 +e.answer-text От природы скромная, ответственная, трудолюбивая вы обладаете ангельским терпением, но при этом отлично знаете, как добиться своего. Тонкое понимание мужской натуры тоже вам на руку — карьера строится проще, если руководитель убеждён, что команда следует его гениальной стратегии, пусть с небольшими коррективами вашего авторства. Уж чего-чего, а креатива и практичности вам не занимать. Схожие черты характера (и, конечно, удачное расположение звёзд) привели на трон Екатерину I — девчонку из прибалтийской деревни, ставшую супругой Петра I и первой Российской императрицей.
                 +e.answer-sharing 
                     +e('a').answer-sharing-button Рассказать друзьям
-                    +e('a').answer-sharing-button-vk
-                        img(src='./images/vk.svg')
-                    +e('a').answer-sharing-button-od
-                        img(src='./images/od.svg')
-                    +e('a').answer-sharing-button-tg
-                        img(src='./images/tg.svg')
-                +e.answer-film
-                    img(src='./images/result__promo-film.png')
-                +e('a').answer-button Купить билет
+                    +e('a').answer-sharing-button-link
+                        +e.answer-sharing-button-vk
+                    +e('a').answer-sharing-button-link
+                        +e.answer-sharing-button-od
+                    +e('a').answer-sharing-button-link
+                        +e.answer-sharing-button-tg
             +e.wrap__result-img
                 img(src='./images/result-img-1.png')
+        +e.wrap__film
+            +e.answer-film
+            +e('a').answer-button Купить билет
         +e.footer
                 +e.content-icons
                     img(src='./images/twelve.svg')

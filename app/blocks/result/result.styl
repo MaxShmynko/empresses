@@ -2,16 +2,19 @@
     width 100%
     position relative
     background url(/images/promo.jpg) 0 0/100% 100% no-repeat
-    height 100vh
+    height 100%
 
-    &__wrap
-        padding w(100) w(60) w(50) w(64)
+    &__wrap__main
+        padding w(100) w(60) w(100) w(64)
         display flex
         flex-direction row
         justify-content flex-start
 
+    &__wrap__film
+        padding w(15) w(15) w(50)
+
     &__answer
-        max-width w(1000)
+        max-width w(1300)
         display flex
         flex-direction column
         align-items center
@@ -20,11 +23,13 @@
         img
             position absolute
             width 100%
+            height w(600)
             top w(30)
 
 
     &__answer-title
-        margin w(141)
+        margin w(0) w(260) w(0) w(140)
+        width w(890)
         color $c-beige
         text-shadow w(4) w(4) w(7) $c-black
         font-family $ff-Romul
@@ -33,12 +38,90 @@
         line-height w(68)
 
     &__answer-text
+        margin-top w(45)
         max-width w(840)
         color $c-white
         font-family $ff-FuturaPT
         font-size w(32)
         font-weight 400
         line-height w(32)
+        margin-bottom w(50)
+        text-align left
+
+    &__answer-sharing-button-vk
+        padding w(11) w(20)
+        width w(80)
+        height w(60)
+        background-image url(/images/vk.svg)
+        background-size cover
+
+    &__answer-sharing-button-od
+        padding w(11) w(20)
+        width w(80)
+        height w(60)
+        background-image url(/images/od.svg)
+        background-size cover
+
+    &__answer-sharing-button-tg
+        padding w(11) w(20)
+        width w(80)
+        height w(60)
+        background-image url(/images/tg.svg)
+        background-size cover
+
+    &__answer-sharing-button-link
+        margin-right w(30)
+        border-radius w(35)
+        border w(1) solid #E0CA7A
+        padding w(20) w(20)
+
+    &__answer-sharing-button
+        margin-right w(30)
+        padding w(18) w(30)
+        color #FBF4C1
+        text-align center
+        text-shadow w(4) w(4) w(2) rgba(0, 0, 0, 0.25)
+        font-family $ff-Romul
+        font-size w(21)
+        font-style normal
+        font-weight 400
+        line-height w(68)
+        letter-spacing w(1.05)
+        border-radius w(35)
+        border w(1) solid #E0CA7A
+        background rgba(0, 0, 0, 0.15)
+
+    &__answer-button
+        margin w(20) 0 0 27%
+        padding w(18) w(70)
+        color #FBF4C1
+        text-align center
+        text-shadow w(4) w(4) w(2) rgba(0, 0, 0, 0.25)
+        font-family $ff-Romul
+        font-size w(21)
+        font-style normal
+        font-weight 400
+        line-height w(38)
+        letter-spacing w(1.05)
+        border-radius w(35)
+        border w(1) solid #E0CA7A
+        background rgba(0, 0, 0, 0.15)
+
+    &__answer-film
+        margin w(0) 0 w(30) 18% 
+        width w(716)
+        height w(151)
+        background-image url(/images/result__promo-film.png)
+        background-size cover
+
+    &__wrap__result-img
+        position absolute
+        max-width w(650)
+        width w(650)
+        top w(80)
+        right w(60)
+        img
+            width 100%
 
     &__footer
         position absolute

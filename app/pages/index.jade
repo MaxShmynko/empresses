@@ -1,8 +1,12 @@
 extends /blocks/layout-default/layout-default
 include /blocks/promo/promo
+include /blocks/result/result
+include /blocks/test/test
 
 block head
 	- var pageTitle = 'Project Template';
 
 block content
 	+promo()
+	+test()
+	+result()

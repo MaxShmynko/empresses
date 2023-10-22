@@ -1,0 +1,123 @@
+.test
+    position relative
+    min-height 100vh
+    background url('/images/test-bg.jpg') no-repeat center
+    background-size cover
+
+    &__wrap
+        position relative
+        display flex
+        flex-direction row
+        justify-content space-between
+        padding w(102) w(60) w(130) w(140)
+
+    &__border
+        position absolute
+        width 100%
+        height w(600)
+        top w(227)
+        right w(260)
+
+    &__wrap__content
+        margin-top w(60)
+        position relative
+        height 100%
+        display flex
+        flex-flow column
+        align-items stretch
+        justify-content space-between
+        img
+            position absolute
+            width 100%
+            height w(600)
+            top w(225)
+
+    &__head
+        position relative
+        display flex
+        flex-direction row
+        margin-bottom w(60)
+    
+    &__counter-text
+        margin-top w(65)
+        color $c-white
+        text-shadow w(4) w(4) w(7) #000
+        font-family $ff-Romul
+        font-size w(228)
+        font-weight 400
+        line-height w(68)
+    
+    &__title
+        margin-left w(20)
+        max-width w(760)
+        color $c-beige
+        text-shadow w(4) w(4) w(7) $c-black
+        font-family $ff-Romul
+        font-size w(38)
+        font-weight 400
+        line-height w(64)
+        img
+            position absolute
+            width 100%
+            height w(600)
+            top w(30)
+    
+    &__item
+        margin-bottom w(40)
+        display flex
+        flex-flow row nowrap
+        justify-content flex-start
+        align-items center
+        cursor pointer
+    
+    &__sign
+        position relative
+        width w(44)
+        height w(44)
+        background-color $c-grey-frame
+        color $c-black
+        border 1px solid $c-beige
+        border-radius 50%
+        margin-right w(35)
+        flex-shrink 0
+        transition background-color .3s, color .3s
+        +below(768px)
+            width wm(48)
+            height wm(48)
+            margin-right wm(18)
+
+    &__sign-text
+        display none
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%, -50%)
+        background-color $c-beige
+        border-radius 50%
+        width w(14)
+        height w(14)
+        filter blur(3px)
+    
+    &__answer-text
+        color $c-white
+        font-family $ff-FuturaPT
+        font-size w(32)
+        font-weight 400
+        line-height w(32)
+        +below(768px)
+            font-size wm(24)
+            line-height wm(24)
+
+    &__list
+        margin-left w(130)
+
+    &__img-question
+        z-index 1
+        max-width w(650)
+        width w(650)
+        img
+            width 100%
+
+.test__item:hover .test__sign-text {
+  display: block;
+}
