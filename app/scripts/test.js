@@ -46,9 +46,16 @@ export class Test {
 		this.$answerItem.each((id, item) => {
 			$(item).find(".test__answer-text").text(answers[id].text);
 		});
-		this.$questionImg.html(
-			`<img src="/images/test-image-${this.activeIndex + 1}.png" />`
-		);
+		if ($(window).width() < 768){
+			this.$questionImg.html(
+				`<img src="/images/test-image-mobile-${this.activeIndex + 1}.png" />`
+			);  
+		}
+		else{
+			this.$questionImg.html(
+				`<img src="/images/test-image-${this.activeIndex + 1}.png" />`
+			);
+		}
 	}
 
 	getWinner() {
@@ -68,11 +75,18 @@ export class Test {
 		$("body").removeClass("show-test");
 		$("body").addClass("show-result");
 		const currentResult = this.results.find((item) => item.id === winner);
-		const { title, info,image } = currentResult;
+		const { title, info, image, imageMobile } = currentResult;
 		this.$resultFrameTitle.text(title);
 		this.$resultFrameText.text(info);
-		this.$resultFrameImg.html(
-			`<img src="${image}" />`
-		);
+		if ($(window).width() < 768){
+			this.$resultFrameImg.html(
+				`<img src="${imageMobile}" />`
+			); 
+		}
+		else{
+			this.$resultFrameImg.html(
+				`<img src="${image}" />`
+			);
+		}
 	}
 }

@@ -10,6 +10,10 @@
         flex-direction row
         justify-content space-between
         padding w(102) w(60) w(130) w(140)
+        +below(768px)
+            flex-direction column-reverse
+            padding w(30)
+            align-items center
 
     &__border
         position absolute
@@ -32,11 +36,16 @@
             height w(600)
             top w(225)
 
+        +below(768px)
+            padding-bottom wm(100)
+
     &__head
         position relative
         display flex
         flex-direction row
         margin-bottom w(60)
+        +below(768px)
+            margin-top wm(10)
     
     &__counter-text
         margin-top w(65)
@@ -46,6 +55,9 @@
         font-size w(228)
         font-weight 400
         line-height w(68)
+        +below(768px)
+            margin-top wm(20)
+            font-size wm(64)
     
     &__title
         margin-left w(20)
@@ -61,6 +73,11 @@
             width 100%
             height w(600)
             top w(30)
+
+        +below(768px)
+            font-size wm(12)
+            line-height wm(18)
+            max-width 100%
     
     &__item
         margin-bottom w(40)
@@ -79,12 +96,12 @@
         border 1px solid $c-beige
         border-radius 50%
         margin-right w(35)
-        flex-shrink 0
         transition background-color .3s, color .3s
         +below(768px)
-            width wm(48)
-            height wm(48)
-            margin-right wm(18)
+            width wm(20)
+            height wm(20)
+            margin-right wm(10)
+            flex-shrink 0
 
     &__sign-text
         display none
@@ -97,6 +114,11 @@
         width w(14)
         height w(14)
         filter blur(3px)
+        +below(768px)
+            width wm(10)
+            height wm(10)
+            filter blur(3px)
+
     
     &__answer-text
         color $c-white
@@ -105,11 +127,13 @@
         font-weight 400
         line-height w(32)
         +below(768px)
-            font-size wm(24)
-            line-height wm(24)
+            font-size wm(14)
+            line-height wm(14)
 
     &__list
         margin-left w(130)
+        +below(768px)
+            margin-left wm(30)
 
     &__img-question
         z-index 1
@@ -117,6 +141,36 @@
         width w(650)
         img
             width 100%
+        +below(768px)
+            max-width 95vw
+            width 100%
+
+    &__footer
+        position absolute
+        display flex
+        align-items center
+        justify-content space-between
+        width 100%
+        padding 0 w(50)
+        bottom w(20)
+        img
+            margin-right w(20)
+        +below(1920px)
+            bottom w(50)
+        +below(1800px)
+            bottom w(20)
+        +below(720px)
+            padding 0 wm(20) wm(10) wm(20)
+            img
+                width wm(20)
+                margin-right wm(10)
+
+    &__advertisement
+        color $c-beige
+        font-size w(16)
+        font-family $ff-FuturaPT
+        +below(720px)
+            font-size wm(10)
 
 .test__item:hover .test__sign-text {
   display: block;
