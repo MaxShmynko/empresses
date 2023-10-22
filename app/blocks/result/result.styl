@@ -3,21 +3,22 @@
     position relative
     background url(/images/promo.jpg) 0 0/100% 100% no-repeat
     height 100%
+    display none
 
     &__wrap__main
-        padding w(100) w(60) w(100) w(64)
+        padding w(100) w(60) w(160) w(64)
         display flex
         flex-direction row
         justify-content flex-start
         +below(768px)
             flex-direction column-reverse
             padding wm(10)
-            align-items flex-start
+            align-items center
 
     &__wrap__film
         padding w(15) w(15) w(50)
         +below(768px)
-            padding wm(5) 20% wm(35)
+            padding wm(20) 20% wm(35)
 
     &__answer
         max-width w(1300)
@@ -31,9 +32,24 @@
             width 100%
             height w(600)
             top w(30)
+            +below(768px)
+                position absolute
+                height wm(235)
+                top wm(-22)
 
         +below(768px)
             max-width 100%
+
+    &__border
+        +below(768px)
+            display none
+
+
+    &__border-mobail
+        display none
+        +below(768px)
+            position absolute
+            display block
 
     &__answer-title
         margin w(0) w(260) w(0) w(140)
@@ -44,11 +60,12 @@
         font-size w(48)
         font-weight 400
         line-height w(68)
+        z-index 1
         +below(768px)
-            width 100%
-            font-size wm(16)
+            width wm(300)
+            font-size wm(15)
             line-height wm(30)
-            margin wm(5) wm(0) wm(0) w(150)
+            margin wm(10) wm(130) wm(0) wm(105)
 
     &__answer-text
         margin-top w(45)
@@ -60,55 +77,68 @@
         line-height w(32)
         margin-bottom w(50)
         text-align left
+        z-index 1
         +below(768px)
             margin-top wm(0)
             max-width 65vw
             font-size wm(8)
             line-height wm(10)
-            margin-left wm(40)
+            margin-left wm(0)
             margin-bottom wm(20)
+        +below(400px)
+            margin-left 0
+
+    &__answer-sharing
+        z-index 1
+        display flex
+        +below(768px)
+            width wm(275)
 
     &__answer-sharing-button-vk
-        padding w(11) w(20)
-        width w(80)
-        height w(60)
+        width w(40)
+        height w(40)
         background-image url(/images/vk.svg)
         background-size cover
         +below(768px)
-            padding wm(1) wm(5)
+            width wm(10)
+            height wm(10)
 
     &__answer-sharing-button-od
-        padding w(11) w(20)
-        width w(80)
-        height w(60)
+        width w(40)
+        height w(40)
         background-image url(/images/od.svg)
         background-size cover
         +below(768px)
-            padding wm(1) wm(5)
+            width wm(10)
+            height wm(10)
 
     &__answer-sharing-button-tg
-        padding w(11) w(20)
-        width w(80)
-        height w(60)
+        width w(40)
+        height w(40)
         background-image url(/images/tg.svg)
         background-size cover
         +below(768px)
-            padding wm(1) wm(5)
+            width wm(10)
+            height wm(10)
 
     &__answer-sharing-button-link
         margin-right w(30)
-        border-radius w(35)
+        border-radius w(50)
         border w(1) solid #E0CA7A
-        padding w(20) w(20)
+        padding w(5) w(30) w(5) w(30)
+        flex-shrink 0
+        display flex
+        align-items center
+        justify-content center
         +below(768px)
             margin-right wm(10)
-            border-radius wm(35)
+            border-radius wm(50)
             border wm(1) solid #E0CA7A
-            padding wm(4) wm(4)
+            padding wm(5) wm(9)
 
     &__answer-sharing-button
-        margin-right w(30)
-        padding w(18) w(30)
+        margin-right w(150)
+        padding w(10) w(30)
         color #FBF4C1
         text-align center
         text-shadow w(4) w(4) w(2) rgba(0, 0, 0, 0.25)
@@ -116,20 +146,21 @@
         font-size w(21)
         font-style normal
         font-weight 400
-        line-height w(68)
+        line-height w(60)
         letter-spacing w(1.05)
-        border-radius w(35)
+        border-radius w(50)
         border w(1) solid #E0CA7A
         background rgba(0, 0, 0, 0.15)
         text-decoration none
         +below(768px)
             margin-right wm(10)
             margin-left wm(30)
-            padding wm(5) wm(7)
+            padding wm(6) wm(7) wm(0) wm(7)
             font-size wm(5)
             line-height wm(8)
             letter-spacing wm(1.05)
             border-radius wm(35)
+            border wm(1) solid #E0CA7A
 
     &__answer-button
         margin w(20) 0 0 27%
@@ -191,15 +222,16 @@
         bottom w(20)
         img
             margin-right w(20)
-        +below(1920px)
-            bottom w(50)
         +below(1800px)
             bottom w(20)
         +below(720px)
+            bottom wm(10)
             padding 0 wm(20) wm(10) wm(20)
             img
                 width wm(20)
                 margin-right wm(10)
+        +below(400px)
+            bottom 0
 
     &__advertisement
         color $c-beige

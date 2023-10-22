@@ -3,6 +3,7 @@
     min-height 100vh
     background url('/images/test-bg.jpg') no-repeat center
     background-size cover
+    display none
 
     &__wrap
         position relative
@@ -21,6 +22,16 @@
         height w(600)
         top w(227)
         right w(260)
+        +below(768px)
+            display none
+
+    &__border-mobail
+        display none
+        +below(768px)
+            display block
+            position absolute
+            width 87%
+            top wm(194)
 
     &__wrap__content
         margin-top w(60)
@@ -37,6 +48,7 @@
             top w(225)
 
         +below(768px)
+            margin-top wm(30)
             padding-bottom wm(100)
 
     &__head
@@ -86,6 +98,8 @@
         justify-content flex-start
         align-items center
         cursor pointer
+        +below(768px)
+            padding-right wm(20)
     
     &__sign
         position relative
@@ -97,6 +111,7 @@
         border-radius 50%
         margin-right w(35)
         transition background-color .3s, color .3s
+        flex-shrink 0
         +below(768px)
             width wm(20)
             height wm(20)

@@ -15,8 +15,8 @@ mixin promo()
                         +e('p').text 26 октября в прокат выходит исторический блокбастер Андрея Кравчука «Императрицы» о сложном сплетении судеб первых правительниц Российской империи.
                         +e('p').text Пройдите тест и убедитесь, что вас объединяет с одной из русских императриц.
                     +e.buttons
-                        +e('button').button Пройти ТЕСТ
-                        +e('button').button Купить билет
+                        +e('button' ).button.promo__test Пройти ТЕСТ
+                        +e('button').button(href='#') Купить билет
                 +e.img
                     img(class= 'promo__fon' src='./images/promo-img.png')
                     img(class= 'promo__mobile' src='./images/promo-mobile.jpg')

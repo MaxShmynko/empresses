@@ -2,20 +2,19 @@
     position relative
     background url(/images/promo.jpg) 0 0/100% 100% no-repeat
     height 100vh
-    +below(720px)
+    +below(920px)
         background #000
-
-    +below(400px)
-        overflow hidden
+        height 100%
 
     &__wrap
         padding w(10) 0 0 w(50)
         +below(1920px)
             padding w(93) 0 0 w(50)
         +below(920px)
-            padding wm(20) 0 0 wm(15)
-        +below(720px)
-            padding wm(40) 0 0 0
+            padding wm(40) 0 wm(420) 0
+
+        +below(400px)
+            padding wm(40) 0 wm(430) 0
 
     &__small-title
         color $c-beige
@@ -26,8 +25,9 @@
         font-size w(28)
         line-height w(68)
         letter-spacing w(2.8)
-        +below(720px)
+        +below(920px)
             font-size wm(12)
+            z-index 3
 
     &__title
         display flex
@@ -42,30 +42,32 @@
         padding w(5) 0 w(5) 0
         img
             position absolute
-            width w(170)
+            width w(300)
+            top w(100)
         +below(1920px)
             font-size w(82)
             padding w(20) 0 w(20) 0
-        +below(720px)
+        +below(920px)
             font-size wm(29)
             line-height wm(32)
             padding wm(5) 0 0 0
+            z-index 3
 
 
     &__rounding-1
         left 0
-        +below(720px)
+        +below(920px)
             display none
 
     &__rounding-1-mobile
         display none
-        +below(720px)
+        +below(920px)
             display block
             left 0
 
     &__rounding-2
         right 0
-        +below(720px)
+        +below(920px)
             display none
 
     &__rounding-2-mobile
@@ -79,7 +81,7 @@
         width w(780)
         +below(1920px)
             width w(880)
-        +below(720px)
+        +below(920px)
             width 100%
 
     &__container-text
@@ -94,10 +96,6 @@
         +below(1920px)
             padding 0 w(140)
         +below(920px)
-            font-size wm(6)
-            padding 0 wm(10)
-            line-height wm(6)
-        +below(720px)
             font-size wm(10)
             line-height wm(12)
             padding 0 wm(20)
@@ -106,7 +104,7 @@
         padding-top w(10)
         +below(1920px)
             padding-top w(15)
-        +below(720px)
+        +below(920px)
             padding-top wm(10)
 
     &__img
@@ -119,8 +117,6 @@
         +below(1800px)
             width w(1200)
         +below(920px)
-            width wm(200)
-        +below(720px)
             width 100%
             right 0
             left 0
@@ -134,21 +130,17 @@
                 background linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent)
                 pointer-events none
 
-        +below(400px)
-            width wm(320)
-            height wm(200)
-            bottom wm(150)
-
     &__fon
         width 100%
-        +below(720px)
+        +below(920px)
             display none
 
     &__mobile
         display none
-        +below(720px)
+        +below(920px)
             display block
             width 100%
+            top w(20)
 
     &__buttons
         display flex
@@ -162,6 +154,7 @@
         font-family $ff-Romul
         color $c-beige-button
         background-color transparent
+        text-decoration none
         border w(1) solid $c-beige
         border-radius w(50)
         width w(350)
@@ -171,7 +164,7 @@
         margin-top w(20)
         +below(1920px)
             margin-top w(35)
-        +below(720px)
+        +below(920px)
             padding wm(7) 0 wm(7) 0
             width wm(150)
             font-size wm(9)
@@ -187,7 +180,7 @@
         width 100%
         height w(500)
         background linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))
-        +below(720px)
+        +below(920px)
             height wm(200)
 
     &__number
@@ -196,7 +189,7 @@
         right w(67)
         +below(1920px)
             width w(800)
-        +below(720px)
+        +below(920px)
             width wm(310)
             top wm(105)
 
@@ -214,7 +207,7 @@
             bottom w(50)
         +below(1800px)
             bottom w(20)
-        +below(720px)
+        +below(920px)
             padding 0 wm(20) wm(10) wm(20)
             img
                 width wm(20)
@@ -224,7 +217,7 @@
         color $c-beige
         font-size w(16)
         font-family $ff-FuturaPT
-        +below(720px)
+        +below(920px)
             font-size wm(10)
 
 

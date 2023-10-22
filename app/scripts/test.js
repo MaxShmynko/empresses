@@ -26,7 +26,7 @@ export class Test {
 	}
 
 	handleEvents() {
-		this.$answer.on("click", (e) => {
+		this.$answerItem.on("click", (e) => {
 			const id = $(e.target).closest(".test__item").data("id");
 			this.answers[id] += 1;
 			this.activeIndex += 1;
@@ -39,6 +39,10 @@ export class Test {
 	}
 
 	renderQuestion() {
+		if (this.activeIndex >= this.questions.length) {
+			return;
+		}
+
 		const currentQuestion = this.questions[this.activeIndex];
 		const { title, answers } = currentQuestion;
 		this.$questionCounter.text(this.activeIndex + 1);
@@ -72,6 +76,8 @@ export class Test {
 
 	renderResults() {
 		const winner = this.getWinner();
+		$(".test").hide();
+		$(".result").show();
 		$("body").removeClass("show-test");
 		$("body").addClass("show-result");
 		const currentResult = this.results.find((item) => item.id === winner);
