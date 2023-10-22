@@ -1,5 +1,4 @@
 import $ from "jquery";
-import WOW from "wowjs";
 import { DATA } from "./data";
 import { Test } from "./test";
 
