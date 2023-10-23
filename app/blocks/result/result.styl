@@ -6,7 +6,7 @@
     display none
 
     &__wrap__main
-        padding w(100) w(60) w(160) w(64)
+        padding w(100) w(60) w(100) w(64)
         display flex
         flex-direction row
         justify-content flex-start
@@ -16,6 +16,8 @@
             align-items center
 
     &__wrap__film
+        position relative
+        z-index 1
         padding w(15) w(15) w(50)
         +below(768px)
             padding wm(20) 20% wm(35)
@@ -69,7 +71,7 @@
 
     &__answer-text
         margin-top w(45)
-        max-width w(840)
+        max-width w(940)
         color $c-white
         font-family $ff-FuturaPT
         font-size w(32)
@@ -178,6 +180,7 @@
         border-radius w(35)
         border w(1) solid #E0CA7A
         background rgba(0, 0, 0, 0.15)
+        z-index 1
         +below(768px)
             margin wm(40)
             padding wm(5) wm(10)
