@@ -1,7 +1,7 @@
 mixin result()
     +b('section').result
         +e.wrap__main
-            +e.answer
+            +e.answer.fadeInLeft.wow(data-wow-duration="2s")
                 img( class= 'result__border' src='./images/result-border.svg')
                 img( class= 'result__border-mobail' src='./images/result-border-mobail.svg')
                 +e.answer-title 
@@ -14,8 +14,8 @@ mixin result()
                         +e.answer-sharing-button-od
                     +e('a').answer-sharing-button-link(href='#')
                         +e.answer-sharing-button-tg
-            +e.wrap__result-img
-        +e.wrap__film
+            +e.wrap__result-img.fadeInUp.wow(data-wow-duration="3s")
+        +e.wrap__film.fadeInLeft.wow(data-wow-duration="3s")
             +e.answer-film
             +e('a').answer-button(href='https://www.afisha.ru/movie/imperatricy-273942/') Купить билет
         +e.footer

@@ -3,24 +3,24 @@ mixin promo()
         +e.wrap
             +e.content
                 +e.container
-                    +e.small-title Хотите знать
-                    +e.title
+                    +e.small-title.fadeInLeft.wow(data-wow-duration="2s") Хотите знать
+                    +e.title.fadeInLeft.wow(data-wow-duration="3s")
                         img( class= 'promo__rounding-1' src='./images/rounding-1.svg')
                         img( class= 'promo__rounding-1-mobile' src='./images/rounding-1-mobile.svg')
                         +e.title-text Какая вы императрица?
                         img( class= 'promo__rounding-2' src='./images/rounding-2.svg')
                         img( class= 'promo__rounding-2-mobile' src='./images/rounding-2-mobile.svg')
-                    +e.container-text
+                    +e.container-text.fadeInLeft.wow(data-wow-duration="4s")
                         +e('p').text В глубине души вы давно подозревали, что царские замашки, очевидные для близких, рвутся наружу. Возможно, в ваших венах течет голубая кровь благородных фамилий. А может быть, вы унаследовали аристократический характер от одной из великих государынь.
                         +e('p').text 26 октября в прокат выходит исторический блокбастер Андрея Кравчука «Императрицы» о сложном сплетении судеб первых правительниц Российской империи.
                         +e('p').text Пройдите тест и убедитесь, что вас объединяет с одной из русских императриц.
-                    +e.buttons
+                    +e.buttons.fadeInUp.wow(data-wow-duration="3s")
                         +e('button' ).button.promo__test Пройти ТЕСТ
                         +e('a').button(href='https://www.afisha.ru/movie/imperatricy-273942/') Купить билет
-                +e.img
+                +e.img.fadeInUp.wow(data-wow-duration="3s")
                     img(class= 'promo__fon' src='./images/promo-img.png')
                     img(class= 'promo__mobile' src='./images/promo-mobile.jpg')
-        +e.darkening
+        +e.darkening.fadeIn.wow(data-wow-duration="3s")
             img( class= 'promo__number' src='./images/promo-number.png')
             +e.footer
                 +e.content-icons

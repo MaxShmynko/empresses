@@ -111,5 +111,8 @@
     "webpack-stats-logger": "^1.0.1",
     "webpack-stream": "^3.1.0",
     "wowjs": "^1.1.3"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1"
   }
 }
